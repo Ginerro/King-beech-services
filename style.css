@@ -1,0 +1,149 @@
+/* BASIC RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #00aaff;
+  color: white;
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #00aaff, #66d9ff);
+  color: white;
+}
+.attention {
+  font-size: 2.5em;
+  animation: fadeInDown 1.5s ease-in-out;
+}
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ffcc00;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.pulse {
+  animation: pulse 1.5s infinite;
+}
+
+/* SERVICES */
+#services {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.service {
+  flex: 1 1 250px;
+  margin: 15px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ABOUT */
+#about {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* CONTACT */
+#contact {
+  padding: 40px 20px;
+  background: #f0f8ff;
+  text-align: center;
+}
+#contact form {
+  max-width: 400px;
+  margin: auto;
+}
+#contact input, #contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+#contact button {
+  background: #00aaff;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #00aaff;
+  color: white;
+}
+
+/* FLOATING CALL BUTTON */
+.call-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffcc00;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+  nav { display: none; flex-direction: column; }
+  nav.active { display: flex; }
+  .menu-toggle { display: block; }
+}
